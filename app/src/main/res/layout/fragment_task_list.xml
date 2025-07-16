@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/back_to_routines_button"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginEnd="40dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/end_routine_botton"
+        app:layout_constraintTop_toTopOf="@id/goal_time_display"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="210dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/list_task" />
+
+
+    <TextView
+        android:id="@+id/routine_name"
+        android:layout_width="203dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="Routine Name"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64" />
+
+    <TextView
+        android:id="@+id/total_time"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="Total Time: "
+        android:textSize="18dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/end_routine_botton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView"
+        app:layout_constraintVertical_bias="0.692" />
+
+    <TextView
+        android:id="@+id/total_time_display"
+
+        android:layout_width="75dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:text="-"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/end_routine_botton"
+
+        app:layout_constraintStart_toEndOf="@+id/total_time"
+        app:layout_constraintTop_toBottomOf="@+id/listView"
+        app:layout_constraintVertical_bias="0.692" />
+
+
+
+    <TextView
+        android:id="@+id/goal_time"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:text="Goal Time:"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/end_routine_botton"
+        app:layout_constraintTop_toBottomOf="@+id/listView"
+        app:layout_constraintEnd_toStartOf="@+id/goal_time_display"
+        app:layout_constraintVertical_bias="0.696" />
+
+    <TextView
+        android:id="@+id/goal_time_display"
+        android:layout_width="75dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:text="-"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/end_routine_botton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView"
+        app:layout_constraintVertical_bias="0.696" />
+
+
+    <Button
+        android:id="@+id/end_routine_botton"
+        android:layout_width="237dp"
+        android:layout_height="45dp"
+        android:text="End Routine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/AddTaskButton"
+        android:layout_width="51dp"
+        android:layout_height="49dp"
+
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="93dp"
+        app:layout_constraintBottom_toTopOf="@+id/end_routine_botton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AdvanceBotton"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <Button
+        android:id="@+id/MockModeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="93dp"
+        android:text="Stop"
+        app:layout_constraintBottom_toTopOf="@+id/end_routine_botton"
+        app:layout_constraintEnd_toStartOf="@+id/AdvanceBotton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/AdvanceBotton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="93dp"
+        android:text="Resume"
+        app:layout_constraintBottom_toTopOf="@+id/end_routine_botton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/MockModeButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
